@@ -210,6 +210,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func didTapLoginButton() {
+        
         //dismiss keyboard
         passwordField.resignFirstResponder()
         usernameEmailField.resignFirstResponder()
@@ -219,7 +220,35 @@ class LoginViewController: UIViewController {
             return
         }
         
+        var email: String?
+        var username: String?
+        
         //Login functionality
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            //email
+            email = usernameEmail
+        } else {
+            //username
+            username = usernameEmail
+        }
+        
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
+            //the closure is called on a background thread
+            //for it to do ui stuff it has to be called on the main thread
+            DispatchQueue.main.async {
+                if success {
+                    //user loged in
+                    //dismiss LoginViewController
+                    self.dismiss(animated: true, completion: nil)
+                }
+                else {
+                    //error occured
+                    let alert = UIAlertController(title: "Log In Error", message: "We were unable to log you in.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
     }
     
     @objc func didTapTermsButton() {
@@ -242,7 +271,9 @@ class LoginViewController: UIViewController {
     
     @objc func didTapCreateAccountButton() {
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        //create a UINavigationController to display the title
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
 }
 
