@@ -41,6 +41,7 @@
 		A5B1A966265860CF00A716D2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1A965265860CF00A716D2 /* PhotoCollectionViewCell.swift */; };
 		A5B1A96A2658615900A716D2 /* ProfileInfoHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1A9692658615900A716D2 /* ProfileInfoHeaderCollectionReusableView.swift */; };
 		A5B1A96D265861CE00A716D2 /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1A96C265861CE00A716D2 /* ProfileTabsCollectionReusableView.swift */; };
+		A5B1A985265899F100A716D2 /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1A984265899F100A716D2 /* models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		A5B1A965265860CF00A716D2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5B1A9692658615900A716D2 /* ProfileInfoHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		A5B1A96C265861CE00A716D2 /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
+		A5B1A984265899F100A716D2 /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		A5B1A8BA26536E7D00A716D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A5B1A984265899F100A716D2 /* models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				A5B1A8C82653702B00A716D2 /* ProfileViewController.swift in Sources */,
 				A5B1A91E2655933F00A716D2 /* AuthManager.swift in Sources */,
 				A5B1A8A426536D8D00A716D2 /* AppDelegate.swift in Sources */,
+				A5B1A985265899F100A716D2 /* models.swift in Sources */,
 				A5B1A8A626536D8D00A716D2 /* SceneDelegate.swift in Sources */,
 				A5B1A95C265769D300A716D2 /* IGFeedPostActionsTableViewCell.swift in Sources */,
 				A5B1A8DF265371CD00A716D2 /* ListViewController.swift in Sources */,
